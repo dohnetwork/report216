@@ -53,4 +53,4 @@ WORKDIR /report
 #    --no-scripts \
 #    --prefer-dist
 COPY ./report ./
-chmod 777 -R /report
+RUN chmod 777 -R /report
