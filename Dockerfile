@@ -3,7 +3,7 @@ LABEL maintainer="dohnetwork@gmail.com"
 LABEL description="Alpine"
 # Setup apache and php
 #RUN apt-get update && \
-UN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y \
         --no-install-recommends &&\
    python python-pip libmysqlclient-dev php lftp\
 #php5-fpm php5-cli php5-mysqlnd php5-pgsql php5-sqlite php5-redis \
