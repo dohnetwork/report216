@@ -1,4 +1,5 @@
-FROM alpine:3.14
+#FROM alpine:3.14
+FROM ubuntu:18.04
 LABEL maintainer="dohnetwork@gmail.com"
 LABEL description="Alpine"
 # Setup apache and php
