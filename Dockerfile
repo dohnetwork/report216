@@ -10,7 +10,7 @@ apt-get install -y  \
 #             apache2 \
 #             apache2-ssl \
 #             php7-apache2 \
-                     curl python python-pip  libmysqlclient-dev  libmariadbclient-dev python-dev php\
+                     curl python python-pip  libmysqlclient-dev  libmariadbclient-dev python-dev php lftp \
 #                    git \
 #                    php7 \
 #                    php7-curl \
