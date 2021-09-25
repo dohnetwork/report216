@@ -1,16 +1,24 @@
-#FROM alpine:3.14
 FROM ubuntu:18.04
 LABEL maintainer="dohnetwork@gmail.com"
 LABEL description="Alpine"
 # Setup apache and php
-
 RUN apt-get update && \
-apt-get install -y  \
+apt-get install -y  python python-pip libmysqlclient-dev \
+#php5-fpm php5-cli php5-mysqlnd php5-pgsql php5-sqlite php5-redis \
+#RUN apt-get update && \
+#apt-get install -y  \
 #RUN apk --update add wget \
 #             apache2 \
 #             apache2-ssl \
 #             php7-apache2 \
-                     curl python python-pip  libmysqlclient-dev  libmariadbclient-dev python-dev php lftp \
+#                     curl  \
+#                     python \
+#                     python-pip \
+#                     libmysqlclient-dev \
+#                     libmariadbclient-dev \
+#                     python-dev \
+#                     php \
+#                     lftp \
 #                    git \
 #                    php7 \
 #                    php7-curl \
@@ -21,7 +29,7 @@ apt-get install -y  \
 #                    php7-phar \
 #                    php7-dom --repository http://nl.alpinelinux.org/alpine/edge/testing/ && rm /var/cache/apk/* \
             && mkdir /report
-	    #RUN pip install uwsgi
+            #RUN pip install uwsgi
             RUN pip install mysql-python
 #EXPOSE 80 443
 
@@ -43,3 +51,5 @@ WORKDIR /report
 #    --no-scripts \
 #    --prefer-dist
 COPY ./report ./
+
+                                     
