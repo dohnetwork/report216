@@ -6,6 +6,8 @@ FILE='check'
 ftp -n $HOST <<END_SCRIPT
 quote USER $USER
 quote PASS $PASSWD
+quote pasv
+passive
 cd /chok
 lcd /report
 get $FILE   check203
