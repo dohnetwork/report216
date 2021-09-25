@@ -37,4 +37,4 @@ WORKDIR /report
 #    --no-plugins \
 #    --no-scripts \
 #    --prefer-dist
-COPY ./data ./
+COPY ./report ./
