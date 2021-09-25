@@ -1,1 +1,1 @@
-# Php  ยังไม่ได้ติดตั้ง  
+# Php  no install
