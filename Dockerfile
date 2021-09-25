@@ -2,13 +2,10 @@ FROM ubuntu:18.04
 LABEL maintainer="dohnetwork@gmail.com"
 LABEL description="Alpine"
 # Setup apache and php
+#RUN apt-get -y update && apt-get install -y \
+#    php7.0 \
 #RUN apt-get update && \
-#RUN apt-get update && apt-get install -y \
-#        --no-install-recommends &&\
-RUN apt-get update \
-  && apt-get install --no-install-recommends --yes \
-#    gnupg devscripts equivs
-   python python-pip libmysqlclient-dev php lftp
+RUN apt-get -y update && apt-get install -y  python python-pip libmysqlclient-dev \
 #php5-fpm php5-cli php5-mysqlnd php5-pgsql php5-sqlite php5-redis \
 #RUN apt-get update && \
 #apt-get install -y  \
@@ -48,6 +45,7 @@ RUN apt-get update \
 RUN chown -R www-data:www-data /report
 #RUN chmod -R 755 /htdocs
 WORKDIR /report
+#COPY composer.json composer.lock  ./
 #RUN composer install \
 #    --ignore-platform-reqs \
 #    --no-interaction \
@@ -55,5 +53,3 @@ WORKDIR /report
 #    --no-scripts \
 #    --prefer-dist
 COPY ./report ./
-
-                                     
