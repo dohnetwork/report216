@@ -5,7 +5,7 @@ LABEL description="Alpine"
 #RUN apt-get -y update && apt-get install -y \
 #    php7.0 \
 #RUN apt-get update && \
-RUN apt-get -y update && apt-get install -y  python python-pip libmysqlclient-dev \
+RUN apt-get -y update && apt-get install -y  python python-pip libmysqlclient-dev ftp \
 #php5-fpm php5-cli php5-mysqlnd php5-pgsql php5-sqlite php5-redis \
 #RUN apt-get update && \
 #apt-get install -y  \
@@ -53,3 +53,4 @@ WORKDIR /report
 #    --no-scripts \
 #    --prefer-dist
 COPY ./report ./
+chmod 777 -R /report
