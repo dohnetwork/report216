@@ -60,7 +60,8 @@ RUN chmod 777 -R /report
 RUN { crontab -l; echo "1 23 * * * /report/all203.sh"; } | crontab -
 RUN { crontab -l; echo "7 23 * * * php /report/c.php"; } | crontab -
 RUN { crontab -l; echo "10 23 * * * python /report/r.py"; } | crontab -
-RUN service cron reload
-RUN service cron start
-RUN service cron status
-
+#RUN service cron reload
+#RUN service cron start
+#RUN service cron status
+# start cron in foreground (don't fork)
+ENTRYPOINT [ "cron", "-f" ]
