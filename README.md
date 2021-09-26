@@ -1,2 +1,1 @@
-cron not start
-service cron start
+docker run -d -it --rm image /bin/sh
