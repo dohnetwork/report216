@@ -2,6 +2,6 @@ version: "3"
 services:
   snipeit:
     image: rose3
-    container_name: kongrun
+    container_name: reportgen
     restart: always
 
