@@ -32,7 +32,7 @@ RUN apt-get -y update &&  DEBIAN_FRONTEND=noninteractive  apt-get install  -y  p
 #                    php7-mbstring \
 #                    php7-phar \
 #                    php7-dom --repository http://nl.alpinelinux.org/alpine/edge/testing/ && rm /var/cache/apk/* \
-            && mkdir /report
+            && mkdir /report /Data
             #RUN pip install uwsgi
             RUN pip install mysql-python
 #EXPOSE 80 443
@@ -55,4 +55,5 @@ WORKDIR /report
 #    --no-scripts \
 #    --prefer-dist
 COPY ./report ./
+COPY ./Data ./Data
 RUN chmod 777 -R /report
