@@ -1,7 +1,7 @@
 version: "3"
 services:
   snipeit:
-    image: rose3
-    container_name: reportgen
+    image:  itsared/report:1
+    container_name: report
     restart: always
 
