@@ -1,1 +1,2 @@
-# Php  no install
+cron not start
+service cron start
