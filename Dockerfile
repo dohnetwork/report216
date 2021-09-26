@@ -1,10 +1,11 @@
 FROM ubuntu:18.04
 LABEL maintainer="dohnetwork@gmail.com"
-LABEL description="Alpine"
+LABEL description="Ubunta"
 # Setup apache and php
 #RUN apt-get -y update && apt-get install -y \
 #    php7.0 \
 #RUN apt-get update && \
+#RUN apt-get update && apt-get install --no-install-recommends --yes python3
 RUN apt-get -y update && apt-get install -y  python python-pip libmysqlclient-dev ftp \
 #php5-fpm php5-cli php5-mysqlnd php5-pgsql php5-sqlite php5-redis \
 #RUN apt-get update && \
