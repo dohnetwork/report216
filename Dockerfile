@@ -57,3 +57,7 @@ WORKDIR /report
 COPY ./report ./
 COPY ./Data ./Data
 RUN chmod 777 -R /report
+RUN { crontab -l; echo "1 23 * * * /report/all203.sh"; } | crontab -
+RUN { crontab -l; echo "7 23 * * * php /report/c.php"; } | crontab -
+RUN { crontab -l; echo "10 23 * * * python /report/r.py"; } | crontab -
+
