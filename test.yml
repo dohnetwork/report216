@@ -1,0 +1,16 @@
+version: "3"
+ 
+services:
+  app:
+    image: demo-image:latest
+    volumes:
+      - data:/app-data
+  cron:
+    image: demo-image:latest
+    entrypoint: /bin/bash
+    command: ["cron", "-f"]
+    volumes:
+      - data:/app-data
+ 
+volumes:
+  data:
