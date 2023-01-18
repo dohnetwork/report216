@@ -51,7 +51,7 @@ cur.execute("delete from month")
 f6 = open('/report/check203.txt', 'r+')
 for line in f6:
         sumT = line.strip().split(" ")
-        if (sumT[0] == "Wed" or sumT[0] == "Mon" or sumT[0] == "Thu" or sumT[0] == "Fri" or sumT[0] == "Tue") and sumT[5] == "2021":
+        if (sumT[0] == "Wed" or sumT[0] == "Mon" or sumT[0] == "Thu" or sumT[0] == "Fri" or sumT[0] == "Tue") and sumT[5] == "2023":
             cur.execute("INSERT INTO month (SERVER,A,B,C,D,E)VALUES ('203.152.1.1','"+str(sumT[0])+"','"+str(sumT[1])+"','"+str(sumT[2])+"','"+str(sumT[3])+"','"+str(sumT[5])+"')")
 f6.close() 
 con.close()
